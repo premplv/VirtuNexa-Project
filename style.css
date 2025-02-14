@@ -1,0 +1,83 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light mode background */
+    color: #333; /* Light mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+body.dark-mode {
+    background-color: #333; /* Dark mode background */
+    color: #f0f0f0; /* Dark mode text color */
+}
+
+nav {
+    background-color: #333; /* Dark background for navbar */
+    padding: 10px;
+    position: fixed; /* Sticky navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure navbar is on top */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the navigation links */
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #f0f0f0; /* Light text color for navbar links */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+section {
+    padding: 20px;
+    margin-top: 60px; /* Adjust margin to account for fixed navbar */
+    min-height: 400px; /* Ensure sections have some height */
+}
+
+#about, #projects {
+    text-align: center;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff; /* Light background for projects */
+}
+
+body.dark-mode .project {
+    background-color: #444; /* Dark background for projects in dark mode */
+    color: #f0f0f0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: left; /* Align links to the left on smaller screens */
+    }
+    nav li {
+        display: block; /* Stack links vertically */
+        margin: 10px 0;
+    }
+}
